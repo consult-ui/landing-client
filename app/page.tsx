@@ -1,9 +1,17 @@
+import { Header } from '@/entities/header';
+import { OfferWidget } from '@/widgets/offer-widget';
+
 import styles from './page.module.css';
+import { SolutionsWidget } from '@/widgets/solutions-widget';
 
 export default function Home() {
   return (
-    <main className={styles.main} data-testid="home-page">
-      <h1>Hello world!</h1>
-    </main>
+    <>
+      <Header />
+      <main className={styles.main} data-testid="home-page">
+        <OfferWidget />
+        <SolutionsWidget />
+      </main>
+    </>
   );
 }
