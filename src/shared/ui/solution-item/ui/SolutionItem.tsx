@@ -5,12 +5,7 @@ export interface ISolution {
   image: string;
 }
 
-export const SolutionItem: React.FC<ISolution> = ({
-  title,
-  description,
-  image,
-  isActive,
-}) => {
+export const SolutionItem: React.FC<ISolution> = ({ title }: ISolution) => {
   return (
     <div>
       <h3>{title}</h3>

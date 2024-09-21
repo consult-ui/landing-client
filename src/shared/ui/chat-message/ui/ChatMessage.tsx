@@ -10,7 +10,7 @@ export const ChatMessage: React.FC<IMessage> = ({
   title,
   message,
   author = 'user',
-}) => {
+}: IMessage) => {
   return (
     <div className={`${styles.wrapper} ${styles[author]}`}>
       <div className={styles.iconWrapper}></div>
