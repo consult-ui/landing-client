@@ -32,8 +32,8 @@ export const SolutionItem: React.FC<IProps> = ({
       {isActive && (
         <Image
           className={styles.image}
-          width={390}
-          height={394}
+          width={300}
+          height={200}
           src={image}
           alt={title}
         />

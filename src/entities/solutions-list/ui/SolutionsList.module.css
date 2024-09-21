@@ -1,6 +1,7 @@
 .wrapper {
   border: 1px solid rgba(76, 76, 76, 1);
   border-radius: 24px;
+  overflow: hidden;
 }
 
 .wrapper li:not(:last-child) {
