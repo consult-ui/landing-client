@@ -1,8 +1,8 @@
 import { Header } from '@/entities/header';
 import { OfferWidget } from '@/widgets/offer-widget';
+import { SolutionsWidget } from '@/widgets/solutions-widget';
 
 import styles from './page.module.css';
-import { SolutionsWidget } from '@/widgets/solutions-widget';
 
 export default function Home() {
   return (

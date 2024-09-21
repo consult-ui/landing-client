@@ -1,1 +1,1 @@
-export { SolutionItem } from './ui/SolutionItem'
+export { SolutionItem } from './ui/SolutionItem';

@@ -1,4 +1,4 @@
-import { SolutionsList } from "@/entities/solutions-list";
+import { SolutionsList } from '@/entities/solutions-list';
 
 export const SolutionsWidget: React.FC = () => {
   return (
