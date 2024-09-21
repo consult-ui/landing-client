@@ -1,7 +1,4 @@
 :root {
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --text-primary: rgba(255, 255, 255, 1);
   --primary-color: rgba(86, 97, 246, 1);
 }
