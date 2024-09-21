@@ -4,21 +4,26 @@ import arrow from '@/shared/assets/arrow-left.svg';
 
 import styles from './SolutionItem.module.css';
 
-export interface ISolution {
-  isActive: boolean;
+export interface IProps {
+  isActive?: boolean;
   title: string;
   description: string;
   image: string;
+  onClick?: () => void;
 }
 
-export const SolutionItem: React.FC<ISolution> = ({
+export const SolutionItem: React.FC<IProps> = ({
   title,
   isActive,
   description,
   image,
-}: ISolution) => {
+  onClick,
+}: IProps) => {
   return (
-    <div className={`${styles.wrapper} ${isActive && styles.isActive}`}>
+    <div
+      onClick={onClick}
+      className={`${styles.wrapper} ${isActive && styles.isActive}`}
+    >
       <div className={styles.textWrapper}>
         <h3>{title}</h3>
         {isActive && <p>{description}</p>}

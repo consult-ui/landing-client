@@ -16,6 +16,7 @@
 
 .wrapper.isActive {
   padding: 64px 28px;
+  background-color: var(--bg-secondary);
 }
 
 .wrapper.isActive h3 {
