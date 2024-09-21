@@ -6,7 +6,9 @@ export const SolutionsList: React.FC = () => {
   return (
     <ul>
       {SOLUTION_LIST.map((solution, index) => (
-        <SolutionItem key={index} {...solution} />
+        <li key={index}>
+          <SolutionItem {...solution} />
+        </li>
       ))}
     </ul>
   );
