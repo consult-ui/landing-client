@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.wrapper h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper.isActive {
+  padding: 64px 28px;
+  background-color: var(--bg-secondary);
+}
+
+.wrapper.isActive h3 {
+  font-size: 24px;
+  line-height: 30px;
+  width: 350px;
+}
+
+.wrapper.isActive p {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 736px;
+}

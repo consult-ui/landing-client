@@ -1,7 +1,9 @@
 .wrapper {
-  padding: 134px 30px 234px 140px;
+  padding: 21px 0px 156px 83px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .wrapper h1 {
@@ -20,14 +22,22 @@
 }
 
 .wrapper p {
-  margin-bottom: 48.5px;
+  margin-bottom: 48px;
+  font-size: 18px;
+  line-height: 24.5px;
 }
 
 .titleWrapper {
-  width: 654px;
+  max-width: 654px;
+  padding-top: 64px;
 }
 
 .buttonWrapper {
   display: flex;
   gap: 16px;
+}
+
+.chat {
+  top: 21px;
+  right: 0;
 }

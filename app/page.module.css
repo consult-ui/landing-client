@@ -5,27 +5,18 @@
   justify-content: center;
   min-height: 100vh;
   background-image: url('../src/shared/assets/bg-grid.svg');
-  background-repeat: repeat-x;
   background-color: rgba(33, 33, 33, 1);
-}
-
-.page::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 60%;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(86, 97, 246, 0.6); /* Полупрозрачный цвет фона */
-  z-index: -1; /* Размытие под содержимым */
+  background-position: top;
+  background-repeat: repeat-x;
 }
 
 .main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
-.main > h1 {
-  font-family: var(--font-mono), serif;
+
+.blur {
+  position: absolute;
 }

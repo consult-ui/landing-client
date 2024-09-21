@@ -1,7 +1,7 @@
 {
   "name": "landing-client",
   "description": "next js (app router) + ts + rtk query + eslint + prettier + playwright",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
