@@ -1,8 +1,8 @@
 import { Open_Sans } from 'next/font/google';
+import Image from 'next/image';
 
+import chat from '@/shared/assets/chat.svg';
 import { Button } from '@/shared/ui/button';
-
-import { ChatBlock } from '@/entities/chat-block';
 
 import styles from './OfferWidget.module.css';
 
@@ -27,7 +27,13 @@ export const OfferWidget: React.FC = () => {
         </div>
       </div>
 
-      <ChatBlock />
+      <Image
+        className={styles.chat}
+        src={chat}
+        alt={'chat'}
+        width={707}
+        height={408}
+      />
     </div>
   );
 };

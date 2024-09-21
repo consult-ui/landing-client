@@ -6,6 +6,7 @@
   padding: 15px 32px;
   border-radius: 32px;
   color: var(--text-primary);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .button.contained {
@@ -16,4 +17,5 @@
 .button.outlined {
   border: 1px solid var(--text-primary);
   background-color: inherit;
+  font-weight: 600;
 }
