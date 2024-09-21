@@ -7,11 +7,7 @@ type Props = {
 };
 
 const Providers = ({ children }: Props) => {
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default Providers;
