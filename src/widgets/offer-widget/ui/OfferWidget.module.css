@@ -1,5 +1,7 @@
 .wrapper {
-  padding: 164px 48px 156px 48px;
+  padding: 134px 30px 234px 140px;
+  display: flex;
+  align-items: center;
 }
 
 .wrapper h1 {
