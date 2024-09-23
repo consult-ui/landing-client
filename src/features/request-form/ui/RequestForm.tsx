@@ -8,6 +8,7 @@ import styles from './RequestForm.module.scss';
 
 export const RequestForm = () => {
   const [checkbox, setCheckbox] = useState(false);
+
   return (
     <form className={styles.form}>
       <div className={styles.inputWrapper}>
@@ -45,7 +46,7 @@ export const RequestForm = () => {
         <div className={styles.checkbox}>{checkbox && <div></div>}</div>
         <label>Я соглашаюсь с условиями обработки персональных данных</label>
         <input
-          checked={checkbox}
+          defaultChecked={checkbox}
           hidden
           id="agreement-input"
           type="checkbox"
