@@ -1,8 +1,8 @@
 .wrapper {
-  padding: 21px 0px 156px 83px;
-  display: flex;
+  /* padding: 21px 0px 156px 83px; */
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   position: relative;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .titleWrapper {
+  padding: 21px 0px 156px 0px;
   max-width: 654px;
   padding-top: 64px;
 }
@@ -35,9 +36,4 @@
 .buttonWrapper {
   display: flex;
   gap: 16px;
-}
-
-.chat {
-  top: 21px;
-  right: 0;
 }

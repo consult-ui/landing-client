@@ -1,0 +1,50 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  padding: 156px 0;
+  width: 642px;
+  z-index: 4;
+}
+
+.wrapper p:first-child {
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 12px;
+}
+
+.wrapper h2 {
+  font-size: 32px;
+  line-height: 39px;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+.screenBg {
+  position: absolute;
+  left: 982px;
+  top: 71px;
+  z-index: 1;
+
+  @media (min-width: 1990px) {
+    left: calc(982px + 10%);
+  }
+}
+
+.screenBgBlur {
+  position: absolute;
+  top: 419px;
+  left: 1234px;
+  z-index: 0;
+
+  @media (min-width: 1990px) {
+    left: calc(1234px + 10%);
+  }
+}
