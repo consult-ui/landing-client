@@ -1,0 +1,31 @@
+.section {
+  background-color: var(--bg-secondary);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 137px;
+  padding: 42px 0px;
+  overflow: hidden;
+}
+
+.descriptionWrapper {
+  width: 548px;
+}
+
+.descriptionWrapper h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 52px;
+}
+
+.descriptionWrapper > p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 104px;
+}

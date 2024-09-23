@@ -30,13 +30,9 @@ export const SolutionItem: React.FC<IProps> = ({
       </div>
       {!isActive && <Image src={arrow} alt="arrow" />}
       {isActive && (
-        <Image
-          className={styles.image}
-          width={300}
-          height={200}
-          src={image}
-          alt={title}
-        />
+        <div className={styles.imageWrapper}>
+          <Image className={styles.image} src={image} alt={title} />
+        </div>
       )}
     </div>
   );
