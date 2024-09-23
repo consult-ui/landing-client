@@ -9,12 +9,12 @@ import { BenefitsList } from '@/entities/benefits-list';
 import { MAIN_BENEFITS_LIST } from '../const';
 import styles from './BenefitsWidget.module.scss';
 
-export const BenefitsWidget: React.FC = () => {
+export const BenefitsWidget = () => {
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <div className={styles.descriptionWrapper}>
+          <div>
             <p>– наша ценность</p>
             <h2>Главные преимущества</h2>
             <p className={styles.description}>

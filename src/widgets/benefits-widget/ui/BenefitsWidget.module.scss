@@ -4,9 +4,8 @@
 }
 
 .wrapper {
-  padding: 156px 0;
-  width: 642px;
-  z-index: 4;
+  padding: 175px 0;
+  max-width: 650px;
 }
 
 .wrapper p:first-child {
@@ -30,7 +29,7 @@
 .screenBg {
   position: absolute;
   left: 982px;
-  top: 71px;
+  top: 100px;
   z-index: 1;
 
   @media (min-width: 1990px) {
@@ -40,7 +39,7 @@
 
 .screenBgBlur {
   position: absolute;
-  top: 419px;
+  top: 450px;
   left: 1234px;
   z-index: 0;
 

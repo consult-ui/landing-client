@@ -15,13 +15,12 @@
     "lighthouse": "lhci autorun --collect.settings.chromeFlags='--no-sandbox'"
   },
   "dependencies": {
-    "@playwright/test": "^1.47.2",
-    "async-mutex": "^0.5.0",
     "next": "14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.47.2",
     "@eslint/js": "^9.11.0",
     "@lhci/cli": "^0.14.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

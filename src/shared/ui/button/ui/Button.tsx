@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from './Button.module.css';
 
 interface IProps {
@@ -7,10 +5,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export const Button: React.FC<IProps> = ({
-  variant = 'contained',
-  children,
-}) => {
+export const Button = ({ variant = 'contained', children }: IProps) => {
   return (
     <button className={`${styles.button} ${styles[variant]}`}>
       {children}

@@ -12,7 +12,7 @@ export interface IProps {
   onClick?: () => void;
 }
 
-export const SolutionItem: React.FC<IProps> = ({
+export const SolutionItem = ({
   title,
   isActive,
   description,

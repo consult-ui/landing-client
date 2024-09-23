@@ -6,7 +6,7 @@ import { BenefitsList } from '@/entities/benefits-list';
 import { BENEFITS_LIST } from '../const';
 import styles from './IndividualWidget.module.scss';
 
-export const IndividualWidget: React.FC = () => {
+export const IndividualWidget = () => {
   return (
     <section className={styles.section}>
       <Container>

@@ -1,21 +1,20 @@
 .button {
+  padding: 22px 36px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1;
   border: none;
   cursor: pointer;
-  padding: 15px 32px;
-  border-radius: 32px;
+  border-radius: 36px;
   color: var(--text-primary);
   font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
 }
 
 .button.contained {
   background-color: var(--primary-color);
-  font-weight: 600;
 }
 
 .button.outlined {
   border: 1px solid var(--text-primary);
-  background-color: inherit;
-  font-weight: 600;
+  background-color: transparent;
 }

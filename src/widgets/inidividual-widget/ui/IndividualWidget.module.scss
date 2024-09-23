@@ -1,19 +1,14 @@
 .section {
+  padding: 75px 0;
   background-color: var(--bg-secondary);
 }
 
 .wrapper {
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 137px;
-  padding: 42px 0px;
-  overflow: hidden;
-}
-
-.descriptionWrapper {
-  width: 548px;
+  gap: 75px;
 }
 
 .descriptionWrapper h2 {
@@ -27,5 +22,6 @@
 .descriptionWrapper > p {
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 104px;
+  margin-bottom: 100px;
+  opacity: 0.75;
 }
