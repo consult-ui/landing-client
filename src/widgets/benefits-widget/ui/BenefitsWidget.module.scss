@@ -28,22 +28,14 @@
 
 .screenBg {
   position: absolute;
-  left: 982px;
+  right: 0;
   top: 100px;
   z-index: 1;
-
-  @media (min-width: 1990px) {
-    left: calc(982px + 10%);
-  }
 }
 
 .screenBgBlur {
   position: absolute;
   top: 450px;
-  left: 1234px;
+  right: 0;
   z-index: 0;
-
-  @media (min-width: 1990px) {
-    left: calc(1234px + 10%);
-  }
 }

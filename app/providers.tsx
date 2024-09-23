@@ -1,13 +1,11 @@
-'use client';
-
-import React from 'react';
+import './globals.scss';
 
 type Props = {
   children: React.ReactNode;
 };
 
 const Providers = ({ children }: Props) => {
-  return <>{children}</>;
+  return children;
 };
 
 export default Providers;
