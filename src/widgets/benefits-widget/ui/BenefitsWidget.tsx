@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import screenBgBlur from '@/shared/assets/screen-bg-blured.svg';
-import screenBg from '@/shared/assets/screen-bg.svg';
+import screenBg from '@/shared/assets/dashboard.png';
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { BenefitsList } from '@/entities/benefits-list';
@@ -27,11 +26,6 @@ export const BenefitsWidget = () => {
         <BenefitsList items={MAIN_BENEFITS_LIST} />
       </Container>
       <Image src={screenBg} alt="экран" className={styles.screenBg} />
-      <Image
-        src={screenBgBlur}
-        alt="размытый экран"
-        className={styles.screenBgBlur}
-      />
     </section>
   );
 };
