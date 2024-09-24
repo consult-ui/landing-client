@@ -4,13 +4,13 @@ import arrow from '@/shared/assets/arrow-left.svg';
 
 import styles from './SolutionItem.module.css';
 
-export interface IProps {
+type Props = {
   isActive?: boolean;
   title: string;
   description: string;
   image: string;
   onClick?: () => void;
-}
+};
 
 export const SolutionItem = ({
   title,
@@ -18,7 +18,7 @@ export const SolutionItem = ({
   description,
   image,
   onClick,
-}: IProps) => {
+}: Props) => {
   return (
     <div
       onClick={onClick}
@@ -28,7 +28,7 @@ export const SolutionItem = ({
         <h3>{title}</h3>
         {isActive && <p>{description}</p>}
       </div>
-      {!isActive && <Image src={arrow} alt="arrow" />}
+      {!isActive && <Image src={arrow} alt={title} />}
       {isActive && (
         <div className={styles.imageWrapper}>
           <Image className={styles.image} src={image} alt={title} />

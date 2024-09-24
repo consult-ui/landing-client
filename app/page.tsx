@@ -1,6 +1,7 @@
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { BenefitsWidget } from '@/widgets/benefits-widget';
+import { Footer } from '@/widgets/footer';
 import { FormWidget } from '@/widgets/form-widget';
 import { HeaderWidget } from '@/widgets/header-widget';
 import { IndividualWidget } from '@/widgets/inidividual-widget';
@@ -26,6 +27,7 @@ export default function Home() {
       <BenefitsWidget />
       <FormWidget />
       <QuestionsWidget />
+      <Footer />
     </main>
   );
 }

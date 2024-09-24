@@ -21,6 +21,7 @@
   border-bottom: 1px solid var(--border);
   transition: 0.15s;
 }
+.wrapper > ul > li:hover,
 .wrapper > ul > li.active {
   background: var(--bg-secondary);
 }

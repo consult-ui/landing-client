@@ -1,14 +1,12 @@
-import React from 'react';
-
 import { BenefitItem, IBenefit } from '@/shared/ui/benefit-item/ui/BenefitItem';
 
 import styles from './BenefitsList.module.scss';
 
-interface IProps {
+type Props = {
   items: IBenefit[];
-}
+};
 
-export const BenefitsList = ({ items }: IProps) => {
+export const BenefitsList = ({ items }: Props) => {
   return (
     <ul className={styles.wrapper}>
       {items.map((item, i) => (

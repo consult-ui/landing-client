@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { useState } from 'react';
 
 import { SolutionItem } from '@/shared/ui/solution-item';
 
@@ -8,7 +8,7 @@ import { SOLUTION_LIST } from '../const';
 import styles from './SolutionsList.module.css';
 
 export const SolutionsList = () => {
-  const [activeItem, setActiveItem] = React.useState(1);
+  const [activeItem, setActiveItem] = useState(SOLUTION_LIST[0].id);
 
   const handleChangeActive = (id: number) => {
     setActiveItem(id);

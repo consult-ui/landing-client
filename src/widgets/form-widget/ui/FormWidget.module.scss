@@ -34,6 +34,11 @@
 .contact {
   width: 100%;
   padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
   border: 1px solid var(--border);
   border-radius: 16px;
 }
@@ -49,6 +54,7 @@
   font-size: 16px;
   color: var(--text-secondary);
   text-decoration: none;
+  white-space: nowrap;
   transition: 0.15s;
 }
 .contact li a:hover {
@@ -59,9 +65,11 @@
   font-size: 20px;
   line-height: 1;
   color: var(--text-primary);
+  white-space: nowrap;
   text-decoration: none;
+  transition: 0.15s;
 
   &:hover {
-    color: var(--primary-color);
+    text-decoration: underline;
   }
 }

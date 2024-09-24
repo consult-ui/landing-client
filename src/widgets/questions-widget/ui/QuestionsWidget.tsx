@@ -26,7 +26,7 @@ export const QuestionsWidget = () => {
           >
             <header>
               <h3>{title}</h3>
-              <Image src={arrow} alt="arrow" />
+              <Image src={arrow} alt={title} />
             </header>
             {isActive === id && <span>{text}</span>}
           </li>

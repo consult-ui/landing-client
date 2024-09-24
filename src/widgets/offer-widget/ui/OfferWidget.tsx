@@ -27,7 +27,11 @@ export const OfferWidget = () => {
         </div>
       </div>
 
-      <Image className={styles.chat} src={chat} alt={'chat'} />
+      <Image
+        className={styles.chat}
+        src={chat}
+        alt={'Consult Ai - искуственный интеллект для вашего бизнеса'}
+      />
     </div>
   );
 };

@@ -1,0 +1,81 @@
+.footer {
+  padding: 50px 0 75px;
+  background: var(--bg-secondary);
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.nav,
+.bottomNav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+.logoWrapper > small {
+  opacity: 0.65;
+}
+
+.nav > div > h6 {
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: 400;
+}
+.nav > div ul > li {
+  padding: 0.25em 0;
+}
+
+/*phone & email block*/
+.nav > div > article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+.nav > div > article:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+.nav > div > article > small {
+  font-size: 14px;
+  opacity: 0.65;
+}
+.nav > div > article > a {
+  font-size: 20px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+.nav > div > article > a:hover {
+  text-decoration: underline;
+}
+
+.nav > div > div:has(a) {
+  display: flex;
+  gap: 12px;
+}
+.nav > div > div > a {
+  cursor: pointer;
+}
+
+.bottomNav > a,
+.nav > div ul > li > a {
+  font-size: 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  opacity: 0.65;
+  transition: 0.15s;
+}
+.bottomNav > a:hover,
+.nav > div ul > li > a:hover {
+  opacity: 1;
+}

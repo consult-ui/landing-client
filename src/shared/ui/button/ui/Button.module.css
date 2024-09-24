@@ -8,13 +8,21 @@
   color: var(--text-primary);
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
+  transition: 0.15s;
 }
 
 .button.contained {
   background-color: var(--primary-color);
 }
+.button.contained:hover {
+  background-color: var(--primary-color-hover);
+}
 
 .button.outlined {
   border: 1px solid var(--text-primary);
   background-color: transparent;
+}
+.button.outlined:hover {
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
 }

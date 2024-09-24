@@ -25,7 +25,11 @@ export const BenefitsWidget = () => {
 
         <BenefitsList items={MAIN_BENEFITS_LIST} />
       </Container>
-      <Image src={screenBg} alt="экран" className={styles.screenBg} />
+      <Image
+        src={screenBg}
+        alt="Главные преимущества - Consult Ai"
+        className={styles.screenBg}
+      />
     </section>
   );
 };

@@ -6,6 +6,15 @@
   gap: 50px;
   cursor: pointer;
   background-color: var(--bg-primary);
+  transition: background-color 0.15s;
+}
+.wrapper:hover {
+  background-color: var(--bg-secondary);
+}
+.wrapper.isActive {
+  padding: 8px 28px;
+  grid-template-columns: 1fr 320px;
+  background-color: var(--bg-secondary);
 }
 
 .wrapper h3 {
@@ -13,12 +22,6 @@
   line-height: 18px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
-}
-
-.wrapper.isActive {
-  padding: 8px 28px;
-  grid-template-columns: 1fr 320px;
-  background-color: var(--bg-secondary);
 }
 
 .wrapper.isActive h3 {
