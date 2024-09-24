@@ -1,9 +1,15 @@
 import Link from 'next/link';
 
+import type { Metadata } from 'next';
+
 import { Button } from '@/shared/ui/button';
 import { HeaderLogo } from '@/shared/ui/header-logo';
 
 import styles from './not-found.module.css';
+
+export const metadata: Metadata = {
+  title: 'Consult Ai | Страница не найдена',
+};
 
 const NotFound = () => {
   return (
