@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} data-testid="not-found">
       <h1>404</h1>
       <article>
         <HeaderLogo />
