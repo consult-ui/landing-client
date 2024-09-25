@@ -9,7 +9,7 @@ import { Container } from '@/shared/ui/container/ui/Container';
 
 import { QUESTIONS_DATA } from '@/widgets/questions-widget/data';
 
-import styles from './QuestionsWidget.module.css';
+import styles from './QuestionsWidget.module.scss';
 
 export const QuestionsWidget = () => {
   const [isActive, setIsActive] = useState<number | null>(null);

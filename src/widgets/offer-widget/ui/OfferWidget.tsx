@@ -4,7 +4,7 @@ import Image from 'next/image';
 import chat from '@/shared/assets/chat.png';
 import { Button } from '@/shared/ui/button';
 
-import styles from './OfferWidget.module.css';
+import styles from './OfferWidget.module.scss';
 
 const raleway = Raleway({ subsets: ['latin'] });
 

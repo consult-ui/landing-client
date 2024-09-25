@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  font-size: 20px;
+  line-height: 23px;
+
+  @media (max-width: 745px) {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 5%;
+  }
+}
+
+.logo {
+  width: 42px;
+  height: 28px;
+
+  @media (max-width: 745px) {
+    width: 32px;
+    height: 21px;
+  }
+}

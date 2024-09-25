@@ -8,7 +8,7 @@ import { Button } from '@/shared/ui/button';
 import { Container } from '@/shared/ui/container/ui/Container';
 import { HeaderLogo } from '@/shared/ui/header-logo';
 
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
   return (
@@ -22,7 +22,7 @@ export const Footer = () => {
             </small>
           </div>
 
-          <div>
+          <div className={styles.navigation}>
             <h6>Навигация</h6>
             <ul>
               <li>
@@ -43,7 +43,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className={styles.contacts}>
             <h6>Свяжитесь с нами</h6>
             <article>
               <small>Телефон</small>
@@ -53,9 +53,13 @@ export const Footer = () => {
               <small>E-Mail</small>
               <a href="mailto:consalt-ai@gmail.com">consalt-ai@gmail.com</a>
             </article>
+
+            <div className={styles.tabletBtn}>
+              <Button variant="outlined">Оставить заявку</Button>
+            </div>
           </div>
 
-          <div>
+          <div className={styles.messengers}>
             <h6>Мы в мессенджерах</h6>
             <div>
               <a
@@ -85,7 +89,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          <Button variant="outlined">Оставить заявку</Button>
+          <div className={styles.desktopBtn}>
+            <Button variant="outlined">Оставить заявку</Button>
+          </div>
         </nav>
 
         <nav className={styles.bottomNav}>

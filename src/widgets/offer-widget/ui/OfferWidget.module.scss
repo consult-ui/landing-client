@@ -8,6 +8,12 @@
   line-height: 64px;
   font-weight: 700;
   margin-bottom: 32px;
+
+  @media (max-width: 745px) {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 24px;
+  }
 }
 
 .wrapper h1 span {
@@ -22,11 +28,21 @@
   margin-bottom: 48px;
   font-size: 18px;
   line-height: 24px;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 32px;
+  }
 }
 
 .titleWrapper {
   max-width: 654px;
   padding: 120px 0;
+
+  @media (max-width: 745px) {
+    padding: 34px 0 56px 0;
+  }
 }
 
 .buttonWrapper {
@@ -37,4 +53,11 @@
 .chat {
   margin: 0 -10.5vw 0 0;
   z-index: 2;
+  width: 702px;
+  height: 632px;
+
+  @media (max-width: 745px) {
+    width: 368px;
+    height: 352px;
+  }
 }

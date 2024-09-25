@@ -1,9 +1,18 @@
 .wrapper {
   padding: 90px 0;
+
+  @media (max-width: 745px) {
+    padding: 0 0 80px 0;
+  }
 }
 
 .mission {
   font-size: 18px;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .wrapper h2 {
@@ -11,4 +20,10 @@
   line-height: 39px;
   font-weight: 500;
   margin-bottom: 48px;
+
+  @media (max-width: 745px) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 24px;
+  }
 }
