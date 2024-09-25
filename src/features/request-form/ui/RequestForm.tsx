@@ -30,7 +30,7 @@ export const RequestForm = () => {
           required
         />
       </div>
-      <div className={styles.inputWrapper}>
+      <div className={`${styles.inputWrapper} ${styles.phoneInputWrapper}`}>
         <label>Номер телефона</label>
         <input
           id="tel-input"
@@ -44,7 +44,9 @@ export const RequestForm = () => {
         onClick={() => setCheckbox((prev) => !prev)}
       >
         <div className={styles.checkbox}>{checkbox && <div></div>}</div>
-        <label>Я соглашаюсь с условиями обработки персональных данных</label>
+        <label>
+          Я соглашаюсь с <a>условиями обработки персональных данных</a>
+        </label>
         <input
           defaultChecked={checkbox}
           hidden
@@ -55,7 +57,6 @@ export const RequestForm = () => {
       </div>
       <div className={styles.buttonsWrapper}>
         <Button type="submit">Отправить заявку</Button>
-        <Button variant="outlined">Отправить заявку</Button>
       </div>
     </form>
   );

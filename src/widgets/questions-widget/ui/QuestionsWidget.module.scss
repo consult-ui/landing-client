@@ -1,10 +1,20 @@
 .wrapper {
-  padding: 150px 0 100px;
+  padding: 150px 0 100px 0;
+
+  @media (max-width: 745px) {
+    padding: 60px 0 60px 0;
+  }
 }
 
 .wrapper > h2 {
   margin-bottom: 50px;
   font-size: 32px;
+
+  @media (max-width: 745px) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 24px;
+  }
 }
 
 .wrapper > ul {
@@ -20,6 +30,11 @@
   gap: 32px;
   border-bottom: 1px solid var(--border);
   transition: 0.15s;
+
+  @media (max-width: 745px) {
+    padding: 13px 16px;
+    gap: 16px;
+  }
 }
 .wrapper > ul > li:hover,
 .wrapper > ul > li.active {
@@ -45,10 +60,25 @@
   font-size: 21px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
+
+  @media (max-width: 745px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 .wrapper > ul > li > header > img {
   transition: 0.15s;
+
+  @media (max-width: 745px) {
+    width: 18px;
+    height: 16px;
+  }
 }
+.wrapper > ul > li.active h3 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .wrapper > ul > li.active > header > img {
   transform: rotate(90deg);
 }
@@ -59,4 +89,9 @@
   font-weight: 300;
   line-height: 28px;
   opacity: 0.75;
+
+  @media (max-width: 745px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }

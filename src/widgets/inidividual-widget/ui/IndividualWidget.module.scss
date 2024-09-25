@@ -1,6 +1,10 @@
 .section {
   padding: 75px 0;
   background-color: var(--bg-secondary);
+
+  @media (max-width: 745px) {
+    padding: 24px 0;
+  }
 }
 
 .wrapper {
@@ -9,6 +13,12 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 75px;
+
+  @media (max-width: 745px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .descriptionWrapper h2 {
@@ -16,6 +26,12 @@
   font-weight: 500;
   font-size: 32px;
   margin-bottom: 50px;
+
+  @media (max-width: 745px) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .descriptionWrapper > p {
@@ -23,4 +39,28 @@
   line-height: 22px;
   margin-bottom: 100px;
   opacity: 0.75;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 24px;
+  }
+}
+
+.btnDesktop {
+  display: block;
+
+  @media (max-width: 745px) {
+    display: none;
+  }
+}
+
+.btnTablet {
+  display: none;
+
+  @media (max-width: 745px) {
+    display: block;
+    margin-top: 18px;
+    align-self: flex-start;
+  }
 }

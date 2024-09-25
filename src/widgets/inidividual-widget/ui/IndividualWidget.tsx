@@ -20,9 +20,14 @@ export const IndividualWidget = () => {
             основаны на особенностях компании, чтобы максимально точно отражать
             специфику и решать проблемы именно вашего бизнеса.
           </p>
-          <Button>Решить проблему</Button>
+          <div className={styles.btnDesktop}>
+            <Button>Решить проблему</Button>
+          </div>
         </div>
         <BenefitsList items={BENEFITS_LIST} />
+        <div className={styles.btnTablet}>
+          <Button>Решить проблему</Button>
+        </div>
       </Container>
     </div>
   );

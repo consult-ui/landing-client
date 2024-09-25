@@ -8,8 +8,16 @@
   flex-direction: column;
   margin-bottom: 24px;
 
-  &:last-child {
-    margin-bottom: 32px;
+  @media (max-width: 745px) {
+    margin-bottom: 12px;
+  }
+}
+
+.phoneInputWrapper {
+  margin-bottom: 32px;
+
+  @media (max-width: 745px) {
+    margin-bottom: 24px;
   }
 }
 
@@ -21,6 +29,11 @@
   padding-left: 24px;
   margin-bottom: 8px;
   padding-bottom: 0;
+
+  @media (max-width: 745px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 
 .inputWrapper input {
@@ -31,6 +44,12 @@
   outline: none;
   border: 1px solid var(--border);
   border-radius: 32px;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 24px;
+  }
 }
 
 .checkboxWrapper {
@@ -51,11 +70,20 @@
 .checkbox {
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border: 1px solid var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 745px) {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+  }
 }
 
 .checkbox div {
@@ -69,4 +97,9 @@
   display: flex;
   gap: 16px;
   margin-top: auto;
+}
+
+.checkboxWrapper a {
+  color: var(--primary-color);
+  text-decoration: underline;
 }

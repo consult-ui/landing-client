@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { SolutionItem } from '@/shared/ui/solution-item';
 
 import { SOLUTION_LIST } from '../const';
-import styles from './SolutionsList.module.css';
+import styles from './SolutionsList.module.scss';
 
 export const SolutionsList = () => {
   const [activeItem, setActiveItem] = useState(SOLUTION_LIST[0].id);

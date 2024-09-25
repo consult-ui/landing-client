@@ -2,6 +2,10 @@
   padding: 50px 0 75px;
   background: var(--bg-secondary);
   font-size: 16px;
+
+  @media (max-width: 745px) {
+    padding: 48px 0 48px 0;
+  }
 }
 
 .wrapper {
@@ -10,18 +14,35 @@
   gap: 100px;
 }
 
-.nav,
-.bottomNav {
+.nav {
+  position: relative;
+}
+
+.nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: flex-start;
   gap: 2em;
+
+  @media (max-width: 745px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .logoWrapper {
   display: flex;
   flex-direction: column;
   gap: 1.25em;
+
+  @media (max-width: 745px) {
+    width: 204px;
+  }
 }
 .logoWrapper > small {
   opacity: 0.65;
@@ -31,6 +52,11 @@
   margin-bottom: 1em;
   font-size: 20px;
   font-weight: 400;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 .nav > div ul > li {
   padding: 0.25em 0;
@@ -48,12 +74,21 @@
 .nav > div > article > small {
   font-size: 14px;
   opacity: 0.65;
+
+  @media (max-width: 745px) {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
 }
 .nav > div > article > a {
   font-size: 20px;
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 700;
+
+  @media (max-width: 745px) {
+    font-size: 14px;
+  }
 }
 .nav > div > article > a:hover {
   text-decoration: underline;
@@ -74,8 +109,60 @@
   text-decoration: none;
   opacity: 0.65;
   transition: 0.15s;
+
+  @media (max-width: 745px) {
+    font-size: 12px;
+  }
 }
 .bottomNav > a:hover,
 .nav > div ul > li > a:hover {
   opacity: 1;
+}
+
+.messengers {
+  @media (max-width: 745px) {
+    position: absolute;
+    left: 0;
+    top: 132px;
+  }
+}
+
+.desktopBtn {
+  display: block;
+  @media (max-width: 745px) {
+    display: none;
+  }
+}
+
+.tabletBtn {
+  display: none;
+  @media (max-width: 745px) {
+    display: block;
+    width: 132px;
+    position: absolute;
+    right: 10%;
+    top: 173px;
+  }
+}
+
+.bottomNav {
+  @media (max-width: 745px) {
+    gap: 2em;
+    justify-content: space-between;
+    font-size: 12px;
+
+    & a:first-child {
+      order: 0;
+      width: 204px;
+    }
+
+    & p {
+      order: 1;
+      margin-right: auto;
+    }
+
+    & a:nth-child(2) {
+      order: 2;
+    }
+  }
 }

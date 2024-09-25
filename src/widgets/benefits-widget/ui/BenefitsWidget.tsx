@@ -1,6 +1,3 @@
-import Image from 'next/image';
-
-import screenBg from '@/shared/assets/dashboard.png';
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { BenefitsList } from '@/entities/benefits-list';
@@ -25,11 +22,6 @@ export const BenefitsWidget = () => {
 
         <BenefitsList items={MAIN_BENEFITS_LIST} />
       </Container>
-      <Image
-        src={screenBg}
-        alt="Главные преимущества - Consult Ai"
-        className={styles.screenBg}
-      />
     </section>
   );
 };
