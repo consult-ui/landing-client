@@ -1,3 +1,5 @@
+'use client';
+
 import { Raleway } from 'next/font/google';
 import Image from 'next/image';
 
@@ -9,6 +11,13 @@ import styles from './OfferWidget.module.scss';
 const raleway = Raleway({ subsets: ['latin'] });
 
 export const OfferWidget = () => {
+  function scrollToForm() {
+    const form = document.getElementById('user-form');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.titleWrapper}>
@@ -25,6 +34,7 @@ export const OfferWidget = () => {
         <div className={styles.buttonWrapper}>
           <Button
             variant={'contained'}
+            onClick={scrollToForm}
             title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
           >
             Оставьте заявку

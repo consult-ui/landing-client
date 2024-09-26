@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,6 +13,13 @@ import { HeaderLogo } from '@/shared/ui/header-logo';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
+  function scrollToForm() {
+    const form = document.getElementById('user-form');
+
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
   return (
     <footer className={styles.footer}>
       <Container className={styles.wrapper}>
@@ -102,6 +111,7 @@ export const Footer = () => {
           <Button
             variant="outlined"
             title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+            onClick={scrollToForm}
           >
             Оставить заявку
           </Button>

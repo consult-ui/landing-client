@@ -44,3 +44,12 @@
   color: var(--text-secondary);
   border: 1px solid var(--text-secondary);
 }
+
+.button.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: grey;
+  }
+}
