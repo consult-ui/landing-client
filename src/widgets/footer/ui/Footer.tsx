@@ -15,11 +15,11 @@ import styles from './Footer.module.scss';
 export const Footer = () => {
   function scrollToForm() {
     const form = document.getElementById('user-form');
-
     if (form) {
       form.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
+
   return (
     <footer className={styles.footer}>
       <Container className={styles.wrapper}>
@@ -68,13 +68,18 @@ export const Footer = () => {
             </h6>
             <article>
               <small>Телефон</small>
-              <a title="Наш телефон для связи" href="tel:+79689415787">
-                +7 (968) 941-57-87
+              <a
+                title="Наш телефон для связи"
+                href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+              >
+                {process.env.NEXT_PUBLIC_PHONE_NUMBER}
               </a>
             </article>
             <article>
               <small>E-Mail</small>
-              <a href="mailto:consalt-ai@gmail.com">consalt-ai@gmail.com</a>
+              <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                {process.env.NEXT_PUBLIC_EMAIL}
+              </a>
             </article>
           </div>
 
@@ -82,15 +87,7 @@ export const Footer = () => {
             <h6>Мы в мессенджерах</h6>
             <div>
               <a
-                href={'https://t.me/consult_ai_help'}
-                rel="noreferrer"
-                target="_blank"
-                title={'Связаться с нами в Viber'}
-              >
-                <Image src={viber} alt={'Связаться с нами в Viber'} />
-              </a>
-              <a
-                href={'https://t.me/consult_ai_help'}
+                href={process.env.NEXT_PUBLIC_TELEGRAM}
                 rel="noreferrer"
                 target="_blank"
                 title={'Связаться с нами в Telegram'}
@@ -98,12 +95,18 @@ export const Footer = () => {
                 <Image src={telegram} alt={'Связаться с нами в Telegram'} />
               </a>
               <a
-                href={'https://t.me/consult_ai_help'}
+                href={process.env.NEXT_PUBLIC_WHATSAPP}
                 rel="noreferrer"
                 target="_blank"
                 title={'Связаться с нами в WhatsApp'}
               >
                 <Image src={whatsApp} alt={'Связаться с нами в WhatsApp'} />
+              </a>
+              <a
+                href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+                title={'Связаться с нами в Viber'}
+              >
+                <Image src={viber} alt={'Связаться с нами в Viber'} />
               </a>
             </div>
           </div>

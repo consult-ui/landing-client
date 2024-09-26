@@ -26,34 +26,46 @@ export const FormWidget = () => {
               <div className={styles.contact}>
                 <ul>
                   <li>
-                    <a title="Написать нам в Telegram" href="">
+                    <a
+                      title="Написать нам в Telegram"
+                      href={process.env.NEXT_PUBLIC_TELEGRAM}
+                    >
                       Telegram
                     </a>{' '}
                     |
                   </li>
                   <li>
-                    <a title="Написать нам в WhatsApp" href="">
+                    <a
+                      title="Написать нам в WhatsApp"
+                      href={process.env.NEXT_PUBLIC_WHATSAPP}
+                    >
                       WhatsApp
                     </a>{' '}
                     |
                   </li>
                   <li>
-                    <a title="Написать нам в Viber" href="">
+                    <a
+                      title="Написать нам в Viber"
+                      href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+                    >
                       Viber
                     </a>
                   </li>
                 </ul>
-                <a title="Позвонить нам" href="tel:79999999999">
-                  +7 (999) 999 99 99
+                <a
+                  title="Позвонить нам"
+                  href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+                >
+                  {process.env.NEXT_PUBLIC_PHONE_NUMBER}
                 </a>
               </div>
               <div className={styles.contact}>
                 <p>E-Mail</p>
                 <a
                   title="Написать нам на E-Mail"
-                  href="mailto:consalt-ai@gmail.com"
+                  href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
                 >
-                  consalt-ai@gmail.com
+                  {process.env.NEXT_PUBLIC_EMAIL}
                 </a>
               </div>
             </div>
