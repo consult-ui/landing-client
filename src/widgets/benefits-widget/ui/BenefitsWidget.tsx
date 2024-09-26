@@ -11,7 +11,9 @@ export const BenefitsWidget = () => {
       <Container className={styles.wrapper}>
         <div>
           <p>– наша ценность</p>
-          <h2>Главные преимущества</h2>
+          <h2 title="Consult Ai - Главные преимущества">
+            Главные преимущества
+          </h2>
           <p className={styles.description}>
             Одним из ключевых факторов при разработке, была идея создания
             общедоступного и простого в использовании продукта, которым сможет

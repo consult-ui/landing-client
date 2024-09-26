@@ -9,7 +9,9 @@ export const HeaderLogo = () => {
       <Image
         className={styles.logo}
         src={logo}
-        alt={'Consult Ai - искуственный интеллект для вашего бизнеса'}
+        alt={
+          'Consult Ai помогает автоматизировать повседневные процессы и увеличивать эффективность не только сотрудников, но и вашего бизнеса в целом!'
+        }
       />
       <p>CONSULT AI</p>
     </div>

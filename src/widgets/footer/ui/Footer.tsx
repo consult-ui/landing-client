@@ -26,28 +26,42 @@ export const Footer = () => {
             <h6>Навигация</h6>
             <ul>
               <li>
-                <Link href={'/'}>Наша миссия</Link>
+                <Link title="Consult Ai - Наша миссия" href={'/'}>
+                  Наша миссия
+                </Link>
               </li>
               <li>
-                <Link href={'/'}>Индивидуальность</Link>
+                <Link title="Consult Ai - Индивидуальность" href={'/'}>
+                  Индивидуальность
+                </Link>
               </li>
               <li>
-                <Link href={'/'}>Наши преимущества</Link>
+                <Link title="Consult Ai - Наши преимущества" href={'/'}>
+                  Наши преимущества
+                </Link>
               </li>
               <li>
-                <Link href={'/'}>Связаться с нами</Link>
+                <Link title="Consult Ai - Связаться с нами" href={'/'}>
+                  Связаться с нами
+                </Link>
               </li>
               <li>
-                <Link href={'/'}>Вопрос-ответ</Link>
+                <Link title="Consult Ai - Вопрос-ответ" href={'/'}>
+                  Вопрос-ответ
+                </Link>
               </li>
             </ul>
           </div>
 
           <div className={styles.contacts}>
-            <h6>Свяжитесь с нами</h6>
+            <h6 title="Мы ответим в течение двух часов и обговорим все условия сотрудничества">
+              Свяжитесь с нами
+            </h6>
             <article>
               <small>Телефон</small>
-              <a href="tel:+79040574145">+7 (904) 057-41-45</a>
+              <a title="Наш телефон для связи" href="tel:+79689415787">
+                +7 (968) 941-57-87
+              </a>
             </article>
             <article>
               <small>E-Mail</small>
@@ -59,7 +73,7 @@ export const Footer = () => {
             <h6>Мы в мессенджерах</h6>
             <div>
               <a
-                href={'https://t.me/kdubasov'}
+                href={'https://t.me/consult_ai_help'}
                 rel="noreferrer"
                 target="_blank"
                 title={'Связаться с нами в Viber'}
@@ -67,7 +81,7 @@ export const Footer = () => {
                 <Image src={viber} alt={'Связаться с нами в Viber'} />
               </a>
               <a
-                href={'https://t.me/kdubasov'}
+                href={'https://t.me/consult_ai_help'}
                 rel="noreferrer"
                 target="_blank"
                 title={'Связаться с нами в Telegram'}
@@ -75,7 +89,7 @@ export const Footer = () => {
                 <Image src={telegram} alt={'Связаться с нами в Telegram'} />
               </a>
               <a
-                href={'https://t.me/kdubasov'}
+                href={'https://t.me/consult_ai_help'}
                 rel="noreferrer"
                 target="_blank"
                 title={'Связаться с нами в WhatsApp'}
@@ -85,15 +99,16 @@ export const Footer = () => {
             </div>
           </div>
 
-          <Button variant="outlined">Оставить заявку</Button>
+          <Button
+            variant="outlined"
+            title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+          >
+            Оставить заявку
+          </Button>
         </nav>
 
         <nav className={styles.bottomNav}>
           <p>© 2024 Все права защищены</p>
-          <Link href={'/'}>Условия использования</Link>
-          <Link href={'/'}>Политика конфиденциальности</Link>
-          <div />
-          <div />
         </nav>
       </Container>
     </footer>

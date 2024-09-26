@@ -11,7 +11,9 @@ export const IndividualWidget = () => {
     <div className={styles.section}>
       <Container className={styles.wrapper}>
         <div className={styles.descriptionWrapper}>
-          <h2>Индивидуальность</h2>
+          <h2 title="Consult Ai разработан под уникальные ниши бизнесов, поэтому каждый клиент получает уникальный продукт, который направлен на помощь в развитии бизнеса клиента">
+            Индивидуальность
+          </h2>
           <p>
             Платформа полностью адаптируется под уникальные потребности
             конкретного бизнеса. Независимо от того, в какой нише вы работаете,
@@ -21,14 +23,22 @@ export const IndividualWidget = () => {
             специфику и решать проблемы именно вашего бизнеса.
           </p>
           <div className={styles.btnDesktop}>
-            <Button variant="outlined">Контакты</Button>
-            <Button>Оставить заявку</Button>
+            <Button title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов">
+              Оставить заявку
+            </Button>
+            <Button variant="outlined" title="Показать список контактов">
+              Контакты
+            </Button>
           </div>
         </div>
         <BenefitsList items={BENEFITS_LIST} />
         <div className={styles.btnTablet}>
-          <Button variant="outlined">Контакты</Button>
-          <Button>Оставить заявку</Button>
+          <Button title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов">
+            Оставить заявку
+          </Button>
+          <Button variant="outlined" title="Показать список контактов">
+            Контакты
+          </Button>
         </div>
       </Container>
     </div>

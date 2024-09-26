@@ -67,17 +67,16 @@
   cursor: pointer;
 }
 .wrapper > ul > li > header > h3 {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
 
   @media (max-width: 1024px) {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
   }
-
-  @media (max-width: 768px) {
-    line-height: 12px;
+  @media (max-width: 491px) {
+    font-size: 12px;
   }
 }
 .wrapper > ul > li > header > img {
@@ -90,15 +89,16 @@
 }
 .wrapper > ul > li.active h3 {
   font-size: 24px;
-  line-height: 22px;
+  line-height: 1.2;
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    font-size: 16px;
   }
-
   @media (max-width: 768px) {
     font-size: 14px;
-    line-height: 14px;
+  }
+  @media (max-width: 491px) {
+    font-size: 12px;
   }
 }
 
