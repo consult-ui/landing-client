@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/shared/ui/button';
 import { Container } from '@/shared/ui/container/ui/Container';
 
@@ -7,6 +9,14 @@ import { BENEFITS_LIST } from '../const';
 import styles from './IndividualWidget.module.scss';
 
 export const IndividualWidget = () => {
+  function scrollToForm() {
+    const form = document.getElementById('user-form');
+
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
   return (
     <div className={styles.section}>
       <Container className={styles.wrapper}>
@@ -23,7 +33,10 @@ export const IndividualWidget = () => {
             специфику и решать проблемы именно вашего бизнеса.
           </p>
           <div className={styles.btnDesktop}>
-            <Button title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов">
+            <Button
+              onClick={scrollToForm}
+              title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+            >
               Оставить заявку
             </Button>
             <Button variant="outlined" title="Показать список контактов">
@@ -33,7 +46,10 @@ export const IndividualWidget = () => {
         </div>
         <BenefitsList items={BENEFITS_LIST} />
         <div className={styles.btnTablet}>
-          <Button title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов">
+          <Button
+            title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+            onClick={scrollToForm}
+          >
             Оставить заявку
           </Button>
           <Button variant="outlined" title="Показать список контактов">

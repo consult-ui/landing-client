@@ -34,6 +34,7 @@ export const OfferWidget = () => {
         <div className={styles.buttonWrapper}>
           <Button
             variant={'contained'}
+            onClick={scrollToForm}
             title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
           >
             Оставьте заявку
