@@ -1,8 +1,12 @@
 .wrapper {
   padding: 150px 0 100px 0;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     padding: 60px 0 60px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 40px 0;
   }
 }
 
@@ -10,10 +14,16 @@
   margin-bottom: 50px;
   font-size: 32px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
   }
 }
 
@@ -31,7 +41,7 @@
   border-bottom: 1px solid var(--border);
   transition: 0.15s;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     padding: 13px 16px;
     gap: 16px;
   }
@@ -61,15 +71,19 @@
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  @media (max-width: 768px) {
+    line-height: 12px;
   }
 }
 .wrapper > ul > li > header > img {
   transition: 0.15s;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     width: 18px;
     height: 16px;
   }
@@ -77,6 +91,11 @@
 .wrapper > ul > li.active h3 {
   font-size: 18px;
   line-height: 22px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .wrapper > ul > li.active > header > img {
@@ -90,8 +109,13 @@
   line-height: 28px;
   opacity: 0.75;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    line-height: 14px;
   }
 }

@@ -53,10 +53,6 @@ export const Footer = () => {
               <small>E-Mail</small>
               <a href="mailto:consalt-ai@gmail.com">consalt-ai@gmail.com</a>
             </article>
-
-            <div className={styles.tabletBtn}>
-              <Button variant="outlined">Оставить заявку</Button>
-            </div>
           </div>
 
           <div className={styles.messengers}>
@@ -89,9 +85,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className={styles.desktopBtn}>
-            <Button variant="outlined">Оставить заявку</Button>
-          </div>
+          <Button variant="outlined">Оставить заявку</Button>
         </nav>
 
         <nav className={styles.bottomNav}>

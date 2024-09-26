@@ -9,10 +9,16 @@
   font-weight: 700;
   margin-bottom: 32px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 32px;
     line-height: 39px;
     margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
   }
 }
 
@@ -22,6 +28,10 @@
   font-weight: inherit;
   text-transform: uppercase;
   color: var(--primary-color);
+
+  &:first-child {
+    text-transform: none;
+  }
 }
 
 .wrapper p {
@@ -29,25 +39,43 @@
   font-size: 18px;
   line-height: 24px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 32px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 24px;
   }
 }
 
 .titleWrapper {
   max-width: 654px;
+  min-width: 654px;
   padding: 120px 0;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 34px 0 56px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px 0 47px 0;
   }
 }
 
 .buttonWrapper {
   display: flex;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .chat {
@@ -56,8 +84,12 @@
   width: 702px;
   height: 632px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     width: 368px;
     height: 352px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
