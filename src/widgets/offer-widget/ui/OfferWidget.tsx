@@ -13,8 +13,8 @@ export const OfferWidget = () => {
     <div className={styles.wrapper}>
       <div className={styles.titleWrapper}>
         <h1 className={raleway.className}>
-          <span>Conuslt ai</span> — простые инновации для сложных задач вашего
-          бизнеса
+          <span>Conuslt</span> <span>ai</span> — простые инновации для сложных
+          задач вашего бизнеса
         </h1>
         <p>
           Наше решение помогает автоматизировать повседневные процессы и

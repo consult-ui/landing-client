@@ -6,7 +6,7 @@
   background-size: 900px 920px;
   background-repeat: no-repeat;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     background-size: 896px 766px;
     background-position: 253px bottom;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
   padding: 175px 0;
   max-width: 650px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     padding: 52px 0 60px 0;
 
     & ul {
@@ -37,6 +37,14 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 35px 0 40px 0;
+
+    & ul li div {
+      width: 100%;
+    }
+  }
 }
 
 .wrapper p:first-child {
@@ -44,7 +52,7 @@
   line-height: 21px;
   margin-bottom: 12px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 0;
@@ -56,7 +64,7 @@
   line-height: 39px;
   margin-bottom: 32px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 24px;
@@ -68,7 +76,7 @@
   color: var(--text-secondary);
   margin-bottom: 48px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     max-width: 404px;
     font-size: 14px;
     margin-bottom: 30px;

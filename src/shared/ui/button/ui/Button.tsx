@@ -19,7 +19,7 @@ export const Button = (props: IProps) => {
       className={`${styles.button} ${styles[variant]} ${props.className ? styles[props.className] : ''}}`}
       {...rest}
     >
-      {children}
+      <span>{children}</span>
     </button>
   );
 };

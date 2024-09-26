@@ -2,7 +2,7 @@
   padding: 75px 0;
   background-color: var(--bg-secondary);
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     padding: 24px 0;
   }
 }
@@ -14,7 +14,7 @@
   align-items: flex-end;
   gap: 75px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -27,10 +27,16 @@
   font-size: 32px;
   margin-bottom: 50px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
   }
 }
 
@@ -40,17 +46,22 @@
   margin-bottom: 100px;
   opacity: 0.75;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
 .btnDesktop {
   display: block;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -58,7 +69,7 @@
 .btnTablet {
   display: none;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     display: block;
     margin-top: 18px;
     align-self: flex-start;

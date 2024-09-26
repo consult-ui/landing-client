@@ -7,10 +7,15 @@
   font-size: 20px;
   line-height: 23px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     font-size: 15px;
     line-height: 17px;
     letter-spacing: 5%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+    line-height: 13px;
   }
 }
 
@@ -18,8 +23,13 @@
   width: 42px;
   height: 28px;
 
-  @media (max-width: 745px) {
+  @media (max-width: 1024px) {
     width: 32px;
     height: 21px;
+  }
+
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 16px;
   }
 }
