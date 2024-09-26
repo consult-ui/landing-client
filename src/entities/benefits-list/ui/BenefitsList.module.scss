@@ -4,6 +4,10 @@
   gap: 16px;
   max-width: 100%;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media (max-width: 1024px) {
     flex-direction: row;
     gap: 8px;

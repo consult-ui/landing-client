@@ -21,12 +21,14 @@ export const IndividualWidget = () => {
             специфику и решать проблемы именно вашего бизнеса.
           </p>
           <div className={styles.btnDesktop}>
-            <Button>Решить проблему</Button>
+            <Button variant="outlined">Контакты</Button>
+            <Button>Оставить заявку</Button>
           </div>
         </div>
         <BenefitsList items={BENEFITS_LIST} />
         <div className={styles.btnTablet}>
-          <Button>Решить проблему</Button>
+          <Button variant="outlined">Контакты</Button>
+          <Button>Оставить заявку</Button>
         </div>
       </Container>
     </div>

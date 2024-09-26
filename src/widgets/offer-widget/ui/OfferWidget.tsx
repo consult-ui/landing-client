@@ -19,11 +19,12 @@ export const OfferWidget = () => {
         <p>
           Наше решение помогает автоматизировать повседневные процессы и
           увеличивать эффективность не только сотрудников, но и вашего бизнеса в
-          целом!
+          целом! <br />{' '}
+          <b>Чтобы получить консультацию или приобрести продукт:</b>
         </p>
         <div className={styles.buttonWrapper}>
-          <Button variant={'contained'}>Заполнить форму</Button>
-          <Button variant={'outlined'}>Связаться с нами</Button>
+          <Button variant={'contained'}>Оставьте заявку</Button>
+          <Button variant={'outlined'}>Напишите в Telegram</Button>
         </div>
       </div>
 

@@ -59,7 +59,8 @@
 }
 
 .btnDesktop {
-  display: block;
+  display: flex;
+  gap: 10px;
 
   @media (max-width: 1024px) {
     display: none;
@@ -70,7 +71,8 @@
   display: none;
 
   @media (max-width: 1024px) {
-    display: block;
+    display: flex;
+    gap: 10px;
     margin-top: 18px;
     align-self: flex-start;
   }
