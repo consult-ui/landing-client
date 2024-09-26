@@ -1,66 +1,38 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import React from 'react';
+import { FormEvent, useState } from 'react';
 
 import { Button } from '@/shared/ui/button';
 
 import styles from './RequestForm.module.scss';
 
+const errMessage = 'Ошибка отправки формы, пожалуйста, напишите нам в Телеграм';
+
 export const RequestForm = () => {
-  const [checkbox, setCheckbox] = useState(false);
+  const [checkbox, setCheckbox] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
-  // form validation
-  const [isValid, setIsValid] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-
   // fetch validation
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState(false);
+  const [sended, setSended] = useState(false);
+  const [error, setError] = useState('');
 
-  // Регулярные выражения для валидации
-  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  const phoneRegex = /^\d{10,15}$/; // только цифры длина от 10 до 15 символов
+  const sendForm = async (e: FormEvent) => {
+    e.preventDefault();
 
-  const validateEmail = (email: string) => {
-    if (email && !emailRegex.test(email)) {
-      setEmailError('Неверный формат почты');
-      return false;
-    } else {
-      setEmailError('');
-      return true;
-    }
-  };
-
-  const validatePhone = (phone: string) => {
-    if (phone && !phoneRegex.test(phone)) {
-      setPhoneError('Неверный формат номера телефона');
-      return false;
-    } else {
-      setPhoneError('');
-      return true;
-    }
-  };
-
-  useEffect(() => {
-    if (
-      checkbox &&
-      name &&
-      ((email && validateEmail(email)) || (phone && validatePhone(phone)))
-    ) {
-      setIsValid(true);
-    } else {
-      setIsValid(false);
-    }
-  }, [checkbox, name, email, phone]);
-
-  const sendForm = async () => {
     try {
+      if (!checkbox) {
+        throw new Error(
+          'Нужно согласиться с условиями обработки персональных данных',
+        );
+      }
+
+      if (!phone && !email) {
+        throw new Error('Нужно заполнить Email или Номер телефона!');
+      }
+
       setLoading(true);
       const formData = new FormData();
       formData.append('name', name);
@@ -80,59 +52,68 @@ export const RequestForm = () => {
         },
       );
 
-      if (response.ok) {
-        setSent(true);
+      if (response?.ok) {
+        setSended(true);
+      } else {
+        throw new Error(errMessage);
       }
-    } catch {
-      setError(true);
-      setSent(false);
+    } catch (err) {
+      console.log(err);
+      setError((err as Error)?.message || errMessage);
+      setSended(false);
     } finally {
       setLoading(false);
     }
   };
 
+  if (sended) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <h2 className={styles.sendedTitle}>Ваша форма успешно отправлена!</h2>
+        <p className={styles.sended}>
+          В течение двух часов с вами свяжутся наши менеджеры, и вы сможете
+          задать им все интересующие вас вопросы или обсудить условия
+          сотрудничества. Хорошего дня! С уважением, команда <b>Consult Ai.</b>
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <form id={'user-form'} className={styles.form}>
+    <form id={'user-form'} className={styles.form} onSubmit={sendForm}>
       <div className={styles.inputWrapper}>
-        <label htmlFor="name-input">ФИО</label>
+        <label htmlFor="name">ФИО</label>
         <input
-          id="name-input"
+          id="name"
           type="text"
           placeholder="Иванов Иван Иванович"
-          required
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
 
       <div className={styles.inputWrapper}>
-        <label htmlFor="email-input">Почта</label>
+        <label htmlFor="email">Почта</label>
         <input
-          id="email-input"
+          required={!phone}
+          id="email"
           type="email"
           placeholder="email@mail.ru"
           value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            validateEmail(e.target.value);
-          }}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        {emailError && <div className={styles.error}>{emailError}</div>}
       </div>
 
       <div className={`${styles.inputWrapper} ${styles.phoneInputWrapper}`}>
-        <label>Номер телефона</label>
+        <label htmlFor="tel">Номер телефона</label>
         <input
-          id="tel-input"
+          required={!email}
+          id="phone"
           type="tel"
-          placeholder="71234567899"
+          placeholder="+79876543210"
           value={phone}
-          onChange={(e) => {
-            setPhone(e.target.value);
-            validatePhone(e.target.value);
-          }}
+          onChange={(e) => setPhone(e.target.value)}
         />
-        {phoneError && <div className={styles.error}>{phoneError}</div>}
       </div>
 
       <div
@@ -151,31 +132,11 @@ export const RequestForm = () => {
         />
       </div>
 
-      <div className={styles.buttonsWrapper}>
-        {sent ? (
-          <div>Ваша заявка отправлена!</div>
-        ) : (
-          <Button
-            disabled={
-              !isValid ||
-              phoneError !== '' ||
-              emailError !== '' ||
-              loading ||
-              sent
-            }
-            onClick={sendForm}
-          >
-            Отправить заявку
-          </Button>
-        )}
+      <Button disabled={loading} type="submit">
+        {loading ? 'Загрузка...' : 'Отправить заявку'}
+      </Button>
 
-        {loading && <div className={styles.spinner}></div>}
-        {error && (
-          <div className={styles.error}>
-            Произошла ошибка! Попробуйте отправить заявку снова
-          </div>
-        )}
-      </div>
+      {error && <div className={styles.error}>{error}</div>}
     </form>
   );
 };
