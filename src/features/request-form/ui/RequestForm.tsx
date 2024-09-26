@@ -44,13 +44,10 @@ export const RequestForm = () => {
         formData.append('phone', phone);
       }
 
-      const response = await fetch(
-        'https://consult-app-5m2kz.ondigitalocean.app/api/v1/form/submit-form',
-        {
-          method: 'POST',
-          body: formData,
-        },
-      );
+      const response = await fetch(process.env.NEXT_PUBLIC_FORM_URL as string, {
+        method: 'POST',
+        body: formData,
+      });
 
       if (response?.ok) {
         setSended(true);
