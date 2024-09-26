@@ -49,6 +49,11 @@
   border: 1px solid var(--border);
   border-radius: 32px;
 
+  &:focus {
+    border: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);
+  }
+
   @media (max-width: 1024px) {
     font-size: 14px;
     line-height: 14px;
