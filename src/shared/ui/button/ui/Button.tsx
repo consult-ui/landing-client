@@ -9,6 +9,8 @@ interface IProps extends Button {
   variant?: 'outlined' | 'contained';
   children: React.ReactNode;
   className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 export const Button = (props: IProps) => {
@@ -16,7 +18,9 @@ export const Button = (props: IProps) => {
 
   return (
     <button
-      className={`${styles.button} ${styles[variant]} ${props.className ? styles[props.className] : ''}}`}
+      className={`${styles.button} ${styles[variant]} ${props.disabled && styles.disabled} ${props.className ? styles[props.className] : ''}}`}
+      disabled={props.disabled}
+      onClick={props.onClick}
       {...rest}
     >
       <span>{children}</span>
