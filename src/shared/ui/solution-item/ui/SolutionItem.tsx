@@ -25,13 +25,17 @@ export const SolutionItem = ({
       className={`${styles.wrapper} ${isActive && styles.isActive}`}
     >
       <div className={styles.textWrapper}>
-        <h3>{title}</h3>
-        {isActive && <p>{description}</p>}
+        <h3 title={title}>{title}</h3>
+        {isActive && <p title={description}>{description}</p>}
       </div>
       {!isActive && <Image className={styles.arrow} src={arrow} alt={title} />}
       {isActive && (
         <div className={styles.imageWrapper}>
-          <Image className={styles.image} src={image} alt={title} />
+          <Image
+            className={styles.image}
+            src={image}
+            alt={'Consult Ai точно знает про: ' + title}
+          />
         </div>
       )}
     </div>

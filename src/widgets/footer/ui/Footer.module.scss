@@ -33,14 +33,16 @@
 
 .bottomNav {
   display: flex;
-  justify-content: center;
   gap: 50px;
 
-  @media (max-width: 768px) {
-    gap: 24px;
-    row-gap: 13px;
-    flex-wrap: wrap;
-    justify-content: center;
+  & > p {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) {
+    & > p {
+      font-size: 12px;
+    }
   }
 }
 
@@ -51,6 +53,7 @@
 
   @media (max-width: 1024px) {
     width: 204px;
+    gap: 0.5em;
   }
 }
 .logoWrapper > small {
@@ -118,7 +121,6 @@
   cursor: pointer;
 }
 
-.bottomNav > a,
 .nav > div ul > li > a {
   font-size: 16px;
   color: var(--text-primary);
@@ -130,21 +132,6 @@
     font-size: 12px;
   }
 }
-.bottomNav > a:hover,
 .nav > div ul > li > a:hover {
   opacity: 1;
-}
-
-.bottomNav {
-  @media (max-width: 1024px) {
-    gap: 10px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 12px;
-  }
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
 }

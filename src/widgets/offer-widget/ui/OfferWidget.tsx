@@ -1,7 +1,7 @@
 import { Raleway } from 'next/font/google';
 import Image from 'next/image';
 
-import chat from '@/shared/assets/chat.png';
+import chat from '@/shared/assets/chat.webp';
 import { Button } from '@/shared/ui/button';
 
 import styles from './OfferWidget.module.scss';
@@ -23,8 +23,20 @@ export const OfferWidget = () => {
           <b>Чтобы получить консультацию или приобрести продукт:</b>
         </p>
         <div className={styles.buttonWrapper}>
-          <Button variant={'contained'}>Оставьте заявку</Button>
-          <Button variant={'outlined'}>Напишите в Telegram</Button>
+          <Button
+            variant={'contained'}
+            title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+          >
+            Оставьте заявку
+          </Button>
+          <a download href="/files/consalt-pres.pdf">
+            <Button
+              title="Мы приготовили презентацию с описанием нашего продукта"
+              variant={'outlined'}
+            >
+              Скачать презентацию
+            </Button>
+          </a>
         </div>
       </div>
 

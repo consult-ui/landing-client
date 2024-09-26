@@ -11,8 +11,8 @@ export const BenefitItem: React.FC<IBenefit> = ({
 }: IBenefit) => {
   return (
     <div className={styles.wrapper}>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 title={title}>{title}</h3>
+      <p title={description}>{description}</p>
     </div>
   );
 };

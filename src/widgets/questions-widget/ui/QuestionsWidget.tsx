@@ -25,10 +25,10 @@ export const QuestionsWidget = () => {
             key={id}
           >
             <header>
-              <h3>{title}</h3>
-              <Image src={arrow} alt={title} />
+              <h3 title={title}>{title}</h3>
+              <Image src={arrow} alt={title} title={title} />
             </header>
-            {isActive === id && <span>{text}</span>}
+            {isActive === id && <span title={text}>{text}</span>}
           </li>
         ))}
       </ul>
