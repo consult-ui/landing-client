@@ -51,6 +51,7 @@
   line-height: 24px;
 
   & > b {
+    cursor: pointer;
     color: var(--primary-color);
     text-decoration: underline;
   }

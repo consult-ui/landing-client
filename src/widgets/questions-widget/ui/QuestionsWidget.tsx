@@ -20,7 +20,7 @@ export const QuestionsWidget = () => {
       <ul>
         {QUESTIONS_DATA.map(({ id, text, title }) => (
           <li
-            onClick={() => setIsActive(id)}
+            onClick={() => setIsActive(isActive === id ? null : id)}
             className={isActive === id ? styles.active : ''}
             key={id}
           >
