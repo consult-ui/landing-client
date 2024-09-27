@@ -34,19 +34,15 @@ export const RequestForm = () => {
       }
 
       setLoading(true);
-      const formData = new FormData();
-      formData.append('name', name);
-      if (email !== '') {
-        formData.append('email', email);
-      }
-
-      if (phone !== '') {
-        formData.append('phone', phone);
-      }
 
       const response = await fetch(process.env.NEXT_PUBLIC_FORM_URL as string, {
+        headers: { 'content-type': 'application/json' },
         method: 'POST',
-        body: formData,
+        body: JSON.stringify({
+          name,
+          email,
+          phone_number: phone,
+        }),
       });
 
       if (response?.ok) {
