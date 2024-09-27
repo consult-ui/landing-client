@@ -34,6 +34,11 @@
   margin-bottom: 8px;
   padding-bottom: 0;
 
+  & > b {
+    font-weight: inherit;
+    text-decoration: underline;
+  }
+
   @media (max-width: 1024px) {
     font-size: 12px;
     line-height: 12px;

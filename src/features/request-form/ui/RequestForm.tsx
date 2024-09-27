@@ -131,7 +131,7 @@ export const RequestForm = () => {
       >
         <div className={styles.checkbox}>{checkbox && <div></div>}</div>
         <label>
-          Я соглашаюсь с <a href="">условиями обработки персональных данных</a>
+          Я соглашаюсь с <b>общими условиями обработки персональных данных</b>
         </label>
         <input
           defaultChecked={checkbox}
