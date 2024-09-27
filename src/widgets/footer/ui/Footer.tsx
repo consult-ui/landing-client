@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import telegram from '@/shared/assets/telegram.svg';
 import viber from '@/shared/assets/viber.svg';
@@ -21,7 +20,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contacts">
       <Container className={styles.wrapper}>
         <nav className={styles.nav}>
           <div className={styles.logoWrapper}>
@@ -29,37 +28,6 @@ export const Footer = () => {
             <small>
               Conuslt ai — простые инновации для сложных задач вашего бизнеса
             </small>
-          </div>
-
-          <div className={styles.navigation}>
-            <h6>Навигация</h6>
-            <ul>
-              <li>
-                <Link title="Consult Ai - Наша миссия" href={'/'}>
-                  Наша миссия
-                </Link>
-              </li>
-              <li>
-                <Link title="Consult Ai - Индивидуальность" href={'/'}>
-                  Индивидуальность
-                </Link>
-              </li>
-              <li>
-                <Link title="Consult Ai - Наши преимущества" href={'/'}>
-                  Наши преимущества
-                </Link>
-              </li>
-              <li>
-                <Link title="Consult Ai - Связаться с нами" href={'/'}>
-                  Связаться с нами
-                </Link>
-              </li>
-              <li>
-                <Link title="Consult Ai - Вопрос-ответ" href={'/'}>
-                  Вопрос-ответ
-                </Link>
-              </li>
-            </ul>
           </div>
 
           <div className={styles.contacts}>

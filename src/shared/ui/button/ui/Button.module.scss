@@ -12,7 +12,7 @@
 
   & span {
     width: max-content;
-    text-wrap: none;
+    text-wrap: nowrap;
   }
 
   @media (max-width: 1024px) {

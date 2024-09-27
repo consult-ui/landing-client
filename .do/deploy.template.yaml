@@ -1,7 +1,7 @@
 name: consult-landing-client
 services:
-- name: web
-  git:
-    repo_clone_url: https://github.com/consult-ui/landing-client.git
-    branch: main
-  dockerfile_path: Dockerfile
+  - name: web
+    git:
+      repo_clone_url: https://github.com/consult-ui/landing-client.git
+      branch: main
+    dockerfile_path: Dockerfile

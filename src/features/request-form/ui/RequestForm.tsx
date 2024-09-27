@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 import { Button } from '@/shared/ui/button';
 
@@ -59,14 +59,30 @@ export const RequestForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (window.localStorage.getItem('sendedForm') === 'true') {
+      setSended(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (sended) {
+      window.localStorage.setItem('sendedForm', 'true');
+    }
+  }, [sended]);
+
   if (sended) {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div
+        id={'user-form'}
+        style={{ display: 'flex', flexDirection: 'column' }}
+      >
         <h2 className={styles.sendedTitle}>Ваша форма успешно отправлена!</h2>
         <p className={styles.sended}>
           В течение двух часов с вами свяжутся наши менеджеры, и вы сможете
           задать им все интересующие вас вопросы или обсудить условия
-          сотрудничества. Хорошего дня! С уважением, команда <b>Consult Ai.</b>
+          сотрудничества. <br />
+          Хорошего дня! <br /> <br /> С уважением, команда <b>Consult Ai.</b>
         </p>
       </div>
     );

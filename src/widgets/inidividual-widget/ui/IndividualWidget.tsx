@@ -9,8 +9,8 @@ import { BENEFITS_LIST } from '../const';
 import styles from './IndividualWidget.module.scss';
 
 export const IndividualWidget = () => {
-  function scrollToForm() {
-    const form = document.getElementById('user-form');
+  function scrollTo(id: 'user-form' | 'contacts') {
+    const form = document.getElementById(id);
 
     if (form) {
       form.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -34,12 +34,16 @@ export const IndividualWidget = () => {
           </p>
           <div className={styles.btnDesktop}>
             <Button
-              onClick={scrollToForm}
+              onClick={() => scrollTo('user-form')}
               title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
             >
               Оставить заявку
             </Button>
-            <Button variant="outlined" title="Показать список контактов">
+            <Button
+              onClick={() => scrollTo('contacts')}
+              variant="outlined"
+              title="Показать список контактов"
+            >
               Контакты
             </Button>
           </div>
@@ -48,11 +52,15 @@ export const IndividualWidget = () => {
         <div className={styles.btnTablet}>
           <Button
             title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
-            onClick={scrollToForm}
+            onClick={() => scrollTo('user-form')}
           >
             Оставить заявку
           </Button>
-          <Button variant="outlined" title="Показать список контактов">
+          <Button
+            onClick={() => scrollTo('contacts')}
+            variant="outlined"
+            title="Показать список контактов"
+          >
             Контакты
           </Button>
         </div>
