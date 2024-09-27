@@ -41,6 +41,10 @@ export default function RootLayout({
           name="google-site-verification"
           content={process.env.NEXT_PUBLIC_GOOGLE_METRIKA}
         />
+        <meta
+          name="yandex-verification"
+          content={process.env.NEXT_PUBLIC_YA_MASTER_METRIKA}
+        />
       </head>
       <body className={nunito.className}>
         <PreloadResources />
