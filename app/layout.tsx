@@ -2,6 +2,7 @@ import { Nunito_Sans } from 'next/font/google';
 
 import type { Metadata } from 'next';
 
+import PreloadResources from './preload-resources';
 import Providers from './providers';
 
 const nunito = Nunito_Sans({ subsets: ['latin'] });
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
+        <PreloadResources />
         <Providers>{children}</Providers>
       </body>
     </html>
