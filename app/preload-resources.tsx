@@ -1,6 +1,3 @@
-import React from 'react';
-
-import Head from 'next/head';
 import Script from 'next/script';
 
 const PreloadResources = () => {
@@ -8,12 +5,6 @@ const PreloadResources = () => {
 
   return (
     <>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="krlg1-jf0V6FiYv5EfhdKhRWbMxh2-f2DDIJgP_GMNI"
-        />
-      </Head>
       <Script
         dangerouslySetInnerHTML={{
           __html: `

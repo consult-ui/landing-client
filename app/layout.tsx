@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Nunito_Sans } from 'next/font/google';
 
 import type { Metadata } from 'next';
@@ -34,6 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GOOGLE_METRIKA}
+        />
+      </head>
       <body className={nunito.className}>
         <PreloadResources />
         <Providers>{children}</Providers>
