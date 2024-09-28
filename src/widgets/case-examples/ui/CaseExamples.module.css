@@ -1,0 +1,109 @@
+.wrapper {
+  margin: 5em 0 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 1024px) {
+    margin: 2.5em 0 4em;
+    gap: 16px;
+  }
+}
+
+.wrapper > header > p {
+  font-size: 18px;
+  line-height: 1.15;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+}
+.wrapper > header > h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.content {
+  max-width: 100%;
+  display: flex;
+  gap: 2em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+.content::-webkit-scrollbar {
+  height: 28px;
+}
+.content::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+.content::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: var(--bg-secondary);
+}
+.content::-webkit-scrollbar-track,
+.content::-webkit-scrollbar-thumb {
+  border: 8px solid var(--bg-primary);
+  border-radius: 20px;
+}
+
+.block {
+  min-width: 40%;
+  scroll-snap-align: start;
+
+  background-color: var(--bg-secondary);
+  padding: 1.5em;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  @media (max-width: 2000px) {
+    min-width: 65%;
+  }
+  @media (max-width: 650px) {
+    min-width: 80%;
+    padding: 0.75em;
+  }
+}
+.block > h5 {
+  margin-bottom: 0.5em;
+  font-size: 24px;
+  font-weight: 500;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+}
+.block > p {
+  font-size: 18px;
+  line-height: 1.5;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
+}
+.block > h5,
+.block > p {
+  user-select: none;
+}
+.block > button {
+  margin-top: 18px;
+}
