@@ -27,10 +27,19 @@
   }
 }
 
+//size
+.button.sm {
+  padding: 12px 18px;
+
+  @media (max-width: 1024px) {
+    padding: 8px 12px;
+  }
+}
+
+//variants
 .button.contained {
   background-color: var(--primary-color);
 }
-
 .button.contained:hover {
   background-color: var(--primary-color-hover);
 }
@@ -39,12 +48,12 @@
   border: 1px solid var(--text-primary);
   background-color: transparent;
 }
-
 .button.outlined:hover {
   color: var(--text-secondary);
   border: 1px solid var(--text-secondary);
 }
 
+//states
 .button.disabled {
   background-color: grey;
   cursor: not-allowed;

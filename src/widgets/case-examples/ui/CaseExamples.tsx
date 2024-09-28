@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { Button } from '@/shared/ui/button';
 
 import { EXAMPLES_DATA } from '@/widgets/case-examples/data';
@@ -30,16 +32,20 @@ export const CaseExamples = () => {
             className={styles.block}
             title={`Consult Ai - ${elem.title}`}
           >
-            <h5 title={elem.title}>{elem.title}</h5>
-            <p title={elem.text}>{elem.text}</p>
-            {elem.id === 6 && (
-              <Button
-                onClick={scrollToForm}
-                title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
-              >
-                Попробовать сейчас
-              </Button>
-            )}
+            <Image src={elem.img} alt={elem.title} />
+            <div className={styles.blockText}>
+              <h5 title={elem.title}>{elem.title}</h5>
+              <p title={elem.text}>{elem.text}</p>
+              {elem.id === 6 && (
+                <Button
+                  size="sm"
+                  onClick={scrollToForm}
+                  title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
+                >
+                  Попробовать сейчас
+                </Button>
+              )}
+            </div>
           </div>
         ))}
       </div>
