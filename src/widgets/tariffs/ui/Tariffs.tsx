@@ -11,6 +11,9 @@ import styles from './Tariffs.module.css';
 export const Tariffs = () => {
   const [isYear, setIsYear] = useState(false);
 
+  // TODO: remove after adding MV
+  if (window.location.href.includes('consult-ai.ru')) return null;
+
   return (
     <div className={styles.wrapper}>
       <header>
