@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import BlockHeader from '@/shared/ui/block-header';
 
@@ -10,9 +10,15 @@ import styles from './Tariffs.module.css';
 
 export const Tariffs = () => {
   const [isYear, setIsYear] = useState(false);
+  const [isShow, setIsShow] = useState(false);
 
-  // TODO: remove after adding MV
-  if (window.location.href.includes('consult-ai.ru')) return null;
+  useEffect(() => {
+    if (!window.location.href.includes('consult-ai.ru')) {
+      setIsShow(true);
+    }
+  }, []);
+
+  if (!isShow) return null;
 
   return (
     <div className={styles.wrapper}>
