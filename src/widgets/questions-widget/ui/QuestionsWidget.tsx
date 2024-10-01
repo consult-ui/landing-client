@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import arrow from '@/shared/assets/arrow-left.svg';
+import BlockHeader from '@/shared/ui/block-header';
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { QUESTIONS_DATA } from '@/widgets/questions-widget/data';
@@ -16,7 +17,7 @@ export const QuestionsWidget = () => {
 
   return (
     <Container className={styles.wrapper}>
-      <h2>Вопрос-ответ</h2>
+      <BlockHeader title="Вопрос-ответ" />
       <ul>
         {QUESTIONS_DATA.map(({ id, text, title }) => (
           <li

@@ -1,3 +1,4 @@
+import BlockHeader from '@/shared/ui/block-header';
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { RequestForm } from '@/features/request-form';
@@ -10,9 +11,10 @@ export const FormWidget = () => {
       <Container className={styles.wrapper}>
         <div className={styles.descriptionWrapper}>
           <div className={styles.titleWrapper}>
-            <h2 title="Оставьте заявку и мы свяжемся с вами в течение двух часов">
-              Оставьте заявку
-            </h2>
+            <BlockHeader
+              style={{ marginBottom: '1em' }}
+              title="Оставьте заявку"
+            />
             <p className={styles.description}>
               Понравилось предложение? Остались вопросы? Свяжитесь с нами,
               оставив контактные данные. Наши менеджеры свяжутся с Вами в

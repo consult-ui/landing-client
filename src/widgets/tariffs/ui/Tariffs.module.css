@@ -1,0 +1,124 @@
+.wrapper {
+  margin: 5em 0 10em;
+}
+
+.wrapper > header {
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  border-radius: 30px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+.buttons > button {
+  width: 200px;
+  height: 52px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--text-primary);
+  transition: 0.15s;
+}
+.buttons > button:disabled {
+  background: var(--primary-color);
+  border: 1px solid var(--border);
+}
+.buttons > button:first-child {
+  margin: -1px 0 -1px -1px;
+}
+.buttons > button:last-child {
+  margin: -1px -1px -1px 0;
+}
+
+/*blocks*/
+.blocks {
+  display: grid;
+  grid-template-columns: 1.375fr 2fr;
+  gap: 1.5em;
+}
+
+.block {
+  display: grid;
+  grid-template-rows: auto 1fr 60px;
+  gap: 1.5em;
+
+  padding: 1.5em;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.block:nth-child(3) {
+  grid-column: span 2;
+}
+
+/*header*/
+.block > header {
+  padding-bottom: 1.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid var(--border);
+}
+.block > header > h3 {
+  font-weight: 500;
+  font-size: 32px;
+}
+.block > header > h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.block > header > h4 > span {
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+/*content*/
+.block > div > p {
+  margin-bottom: 0.75em;
+  font-size: 16px;
+}
+.block > div > ul {
+  padding-left: 1.75em;
+}
+.block > div > ul > li {
+  margin: 0.65em 0;
+  line-height: 1.4;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  list-style: disc;
+}
+
+/*footer*/
+.block > footer {
+  display: flex;
+  gap: 0.65em;
+}
+.block > footer > button {
+  padding: 0 2.5em;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--text-primary);
+  border-radius: 30px;
+  border: none;
+  transition: 0.15s;
+}
+.block > footer > button:last-child {
+  padding: 0 1.75em;
+  font-size: 14px;
+  background: none;
+}
+.block > footer > button:hover {
+  background: var(--primary-color-hover);
+}
+.block > footer > button:last-child:hover {
+  background: var(--bg-secondary);
+}

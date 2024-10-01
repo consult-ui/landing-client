@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 
+import BlockHeader from '@/shared/ui/block-header';
 import { Button } from '@/shared/ui/button';
 
 import { EXAMPLES_DATA } from '@/widgets/case-examples/data';
@@ -18,12 +19,10 @@ export const CaseExamples = () => {
 
   return (
     <div className={styles.wrapper}>
-      <header title="Популярные задачи платформы Consult Ai">
-        <p>– популярные задачи</p>
-        <h2 title="Примеры использования платформы Consult Ai">
-          Примеры использования
-        </h2>
-      </header>
+      <BlockHeader
+        title="Примеры использования"
+        subtitle="– популярные задачи"
+      />
 
       <div className={styles.content}>
         {EXAMPLES_DATA.map((elem) => (

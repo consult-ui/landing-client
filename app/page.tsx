@@ -9,6 +9,7 @@ import { IndividualWidget } from '@/widgets/inidividual-widget';
 import { OfferWidget } from '@/widgets/offer-widget';
 import { QuestionsWidget } from '@/widgets/questions-widget';
 import { SolutionsWidget } from '@/widgets/solutions-widget';
+import { Tariffs } from '@/widgets/tariffs';
 
 import styles from './page.module.scss';
 
@@ -22,6 +23,7 @@ export default function Home() {
             <OfferWidget />
             <SolutionsWidget />
             <CaseExamples />
+            <Tariffs />
           </Container>
         </div>
       </div>

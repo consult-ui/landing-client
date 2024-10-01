@@ -1,3 +1,4 @@
+import BlockHeader from '@/shared/ui/block-header';
 import { Container } from '@/shared/ui/container/ui/Container';
 
 import { BenefitsList } from '@/entities/benefits-list';
@@ -10,10 +11,10 @@ export const BenefitsWidget = () => {
     <section className={styles.section}>
       <Container className={styles.wrapper}>
         <div>
-          <p>– наша ценность</p>
-          <h2 title="Consult Ai - Главные преимущества">
-            Главные преимущества
-          </h2>
+          <BlockHeader
+            title="Главные преимущества"
+            subtitle="– наша ценность"
+          />
           <p className={styles.description}>
             Одним из ключевых факторов при разработке, была идея создания
             общедоступного и простого в использовании продукта, которым сможет

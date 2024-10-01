@@ -1,5 +1,6 @@
 'use client';
 
+import BlockHeader from '@/shared/ui/block-header';
 import { Button } from '@/shared/ui/button';
 import { Container } from '@/shared/ui/container/ui/Container';
 
@@ -21,9 +22,10 @@ export const IndividualWidget = () => {
     <div className={styles.section}>
       <Container className={styles.wrapper}>
         <div className={styles.descriptionWrapper}>
-          <h2 title="Consult Ai разработан под уникальные ниши бизнесов, поэтому каждый клиент получает уникальный продукт, который направлен на помощь в развитии бизнеса клиента">
-            Индивидуальность
-          </h2>
+          <BlockHeader
+            style={{ marginBottom: '1.75em' }}
+            title="Гибкий подход"
+          />
           <p>
             Платформа полностью адаптируется под уникальные потребности
             конкретного бизнеса. Независимо от того, в какой нише вы работаете,
