@@ -5,11 +5,12 @@ import { CaseExamples } from '@/widgets/case-examples';
 import { Footer } from '@/widgets/footer';
 import { FormWidget } from '@/widgets/form-widget';
 import { HeaderWidget } from '@/widgets/header-widget';
-import { IndividualWidget } from '@/widgets/inidividual-widget';
 import { OfferWidget } from '@/widgets/offer-widget';
 import { QuestionsWidget } from '@/widgets/questions-widget';
+import { SavingResources } from '@/widgets/saving-resources ';
 import { SolutionsWidget } from '@/widgets/solutions-widget';
 import { Tariffs } from '@/widgets/tariffs';
+import { Video } from '@/widgets/video';
 
 import styles from './page.module.scss';
 
@@ -22,12 +23,15 @@ export default function Home() {
             <HeaderWidget />
             <OfferWidget />
             <SolutionsWidget />
-            <CaseExamples />
-            <Tariffs />
+            <Video />
           </Container>
         </div>
       </div>
-      <IndividualWidget />
+      <SavingResources />
+      <Container>
+        <CaseExamples />
+        <Tariffs />
+      </Container>
       <BenefitsWidget />
       <FormWidget />
       <QuestionsWidget />

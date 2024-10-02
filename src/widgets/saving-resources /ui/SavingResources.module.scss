@@ -1,0 +1,46 @@
+.wrapper {
+  padding: 5em 0;
+  background: var(--bg-secondary);
+}
+.description {
+  margin-bottom: 2.5em;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em;
+}
+.block {
+  padding: 1.75em;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.block > header {
+  margin-bottom: 1.25em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.block > header small {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.block > header h4 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.block > header h4 > span {
+  font-size: 0.65em;
+  font-weight: 400;
+}
+
+.block > p {
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.5;
+}

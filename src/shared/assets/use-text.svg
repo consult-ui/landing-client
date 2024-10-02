@@ -1,4 +1,10 @@
-<svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="0.476562" width="100" height="100" rx="15" fill="#5661F6"/>
-<path d="M34.9528 82.9609H45.7905M45.7905 82.9609H56.6282M45.7905 82.9609V17.9609M45.7905 17.9609H13.2773V22.6038M45.7905 17.9609H78.3036V22.6038M64.127 82.9648H69.7754M69.7754 82.9648H75.4239M69.7754 82.9648L81.0723 43.4258M75.4239 43.4258H81.0723M81.0723 43.4258H86.7207" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="0.0078125" width="100" height="100" rx="15" fill="url(#paint0_linear_1021_1542)"/>
+<path d="M34.9528 82.4922H45.7905M45.7905 82.4922H56.6282M45.7905 82.4922V17.4922M45.7905 17.4922H13.2773V22.135M45.7905 17.4922H78.3036V22.135M64.127 82.4961H69.7754M69.7754 82.4961H75.4239M69.7754 82.4961L81.0723 42.957M75.4239 42.957H81.0723M81.0723 42.957H86.7207" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_1021_1542" x1="0" y1="50.0078" x2="100" y2="50.0078" gradientUnits="userSpaceOnUse">
+<stop stop-color="#638DFF"/>
+<stop offset="1" stop-color="#5661F6"/>
+</linearGradient>
+</defs>
 </svg>
