@@ -2,6 +2,13 @@
   margin: 5em 0 10em;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1024px) {
+    margin: 5em 0 7em;
+  }
+  @media (max-width: 500px) {
+    margin: 5em 0 2.5em;
+  }
 }
 
 .content {
@@ -10,6 +17,16 @@
   grid-template-columns: 1fr 1fr;
   gap: 5em;
   background: linear-gradient(to left, var(--bg-primary), transparent);
+
+  @media (max-width: 1024px) {
+    gap: 3em 1.5em;
+  }
+  @media (max-width: 796px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 500px) {
+    gap: 1.5em;
+  }
 }
 .content::-webkit-scrollbar {
   height: 28px;
@@ -33,22 +50,52 @@
   gap: 1.5em;
 
   border-radius: 16px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 75px 1fr;
+  }
+  @media (max-width: 380px) {
+    gap: 0.75em;
+    grid-template-columns: 50px 1fr;
+  }
 }
 
 .blockText > h5 {
   margin-bottom: 0.25em;
   font-size: 24px;
   font-weight: 500;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
 }
 .blockText > p {
   font-size: 16px;
   line-height: 1.4;
   color: var(--text-secondary);
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
 }
 .blockText > h5,
 .blockText > p {
   user-select: none;
 }
-.blockText > button {
-  margin-top: 18px;
+
+.block > img {
+  height: auto;
+
+  @media (max-width: 1024px) {
+    width: 75px;
+  }
+  @media (max-width: 380px) {
+    width: 50px;
+  }
 }

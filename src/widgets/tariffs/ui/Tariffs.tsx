@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import BlockHeader from '@/shared/ui/block-header';
+import { scrollTo } from '@/shared/utils/scrollTo';
 
 import { TARRIFS } from '@/widgets/tariffs/data';
 
@@ -10,15 +11,6 @@ import styles from './Tariffs.module.css';
 
 export const Tariffs = () => {
   const [isYear, setIsYear] = useState(false);
-  const [isShow, setIsShow] = useState(false);
-
-  useEffect(() => {
-    if (!window.location.href.includes('consult-ai.ru')) {
-      setIsShow(true);
-    }
-  }, []);
-
-  if (!isShow) return null;
 
   return (
     <div className={styles.wrapper}>
@@ -66,8 +58,12 @@ export const Tariffs = () => {
             </div>
 
             <footer>
-              <button>Подключить «{name}»</button>
-              <button>Остались вопросы?</button>
+              <button onClick={() => scrollTo('user-form')}>
+                Подключить <span>«{name}»</span>
+              </button>
+              <button onClick={() => scrollTo('questions')}>
+                Остались вопросы?
+              </button>
             </footer>
           </div>
         ))}

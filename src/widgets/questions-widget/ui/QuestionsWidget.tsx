@@ -18,7 +18,7 @@ export const QuestionsWidget = () => {
   return (
     <Container className={styles.wrapper}>
       <BlockHeader title="Вопрос-ответ" />
-      <ul>
+      <ul id="questions">
         {QUESTIONS_DATA.map(({ id, text, title }) => (
           <li
             onClick={() => setIsActive(isActive === id ? null : id)}

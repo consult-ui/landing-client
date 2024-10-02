@@ -141,9 +141,11 @@ export const RequestForm = () => {
         />
       </div>
 
-      <Button disabled={loading} type="submit">
-        {loading ? 'Загрузка...' : 'Отправить заявку'}
-      </Button>
+      <div>
+        <Button disabled={loading} type="submit">
+          {loading ? 'Загрузка...' : 'Отправить заявку'}
+        </Button>
+      </div>
 
       {error && <div className={styles.error}>{error}</div>}
     </form>

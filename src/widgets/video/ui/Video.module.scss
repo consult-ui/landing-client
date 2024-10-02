@@ -1,7 +1,16 @@
 .container {
   padding: 2.5em 0 10em;
+
+  @media (max-width: 1024px) {
+    padding: 1.5em 0 2em;
+  }
 }
 
 .container > video {
+  width: 100%;
   border-radius: 24px;
+
+  @media (max-width: 600px) {
+    border-radius: 12px;
+  }
 }

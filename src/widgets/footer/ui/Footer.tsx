@@ -8,17 +8,11 @@ import whatsApp from '@/shared/assets/whatsapp.svg';
 import { Button } from '@/shared/ui/button';
 import { Container } from '@/shared/ui/container/ui/Container';
 import { HeaderLogo } from '@/shared/ui/header-logo';
+import { scrollTo } from '@/shared/utils/scrollTo';
 
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
-  function scrollToForm() {
-    const form = document.getElementById('user-form');
-    if (form) {
-      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
   return (
     <footer className={styles.footer} id="contacts">
       <Container className={styles.wrapper}>
@@ -82,7 +76,7 @@ export const Footer = () => {
           <Button
             variant="outlined"
             title="Заполните форму, наши менеджеры свяжуться с вами в течение двух часов"
-            onClick={scrollToForm}
+            onClick={() => scrollTo('user-form')}
           >
             Оставить заявку
           </Button>
