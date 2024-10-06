@@ -10,7 +10,12 @@ export const Video = () => {
         title="Посмотрите, как работает наша платформа"
       />
 
-      <video src="/videos/video-dashboard.mp4" controls playsInline={false} />
+      <video
+        preload="auto"
+        src="/videos/video-dashboard.mp4"
+        controls
+        playsInline={false}
+      />
     </div>
   );
 };
