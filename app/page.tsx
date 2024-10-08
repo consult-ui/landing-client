@@ -9,7 +9,7 @@ import { OfferWidget } from '@/widgets/offer-widget';
 import { QuestionsWidget } from '@/widgets/questions-widget';
 import { SavingResources } from '@/widgets/saving-resources ';
 import { SolutionsWidget } from '@/widgets/solutions-widget';
-import { Tariffs } from '@/widgets/tariffs';
+// import { Tariffs } from '@/widgets/tariffs';
 import { Video } from '@/widgets/video';
 
 import styles from './page.module.scss';
@@ -30,7 +30,7 @@ export default function Home() {
       <SavingResources />
       <Container>
         <CaseExamples />
-        <Tariffs />
+        {/*<Tariffs />*/}
       </Container>
       <BenefitsWidget />
       <FormWidget />
